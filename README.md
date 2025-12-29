@@ -1,6 +1,6 @@
 # Painel Macro – Monitoramento de Sentimento de Mercado
 
-Aplicação Python que coleta, consolida e apresenta a variação percentual de ativos globais em múltiplas fontes (Investing.com e MarketWatch), transformando os dados em métricas acionáveis em tempo quase real. O objetivo é fornecer um panorama macro com foco em decisão rápida — perfeito para demonstrar habilidades de web scraping robusto, orquestração, persistência de dados e data viz para vagas de Python Developer.
+Aplicação Python que coleta, consolida e apresenta a variação percentual de ativos globais em múltiplas fontes (Investing.com e MarketWatch), transformando os dados em métricas acionáveis em tempo quase real. O objetivo é fornecer um panorama macro com foco em decisão rápida — perfeito para demonstrar habilidades de web scraping robusto, orquestração, persistência de dados e data viz.
 
 ---
 
@@ -113,7 +113,6 @@ main.py                      Entry-point: scheduler (thread) + painel ao vivo
 - Persistir dados em um data warehouse (DuckDB, BigQuery) e montar dashboards interativos (Streamlit, Dash).
 - Adicionar autenticação por proxy próprio para lidar com CAPTCHAs agressivos.
 - Módulo de alertas (Slack/Telegram) quando a soma atingir thresholds.
-- Feature store com indicadores derivados (médias móveis, volatilidade intra-dia).
 - Testes automatizados para parsers e writers usando HTML fixtures.
 
 ---

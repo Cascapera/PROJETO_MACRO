@@ -92,16 +92,16 @@ def write_scores(results: List[VariationResult], column_label: str) -> None:
     scores = []
     variation_sum = 0.0
     for result in results:
-        variation_decimal = result.variation_decimal or 0.0
-        variation_sum += variation_decimal
-        threshold = abs(result.asset.value_base)
         direction = 1 if result.asset.value_base >= 0 else -1
+        variation_decimal = result.variation_decimal or 0.0
+        adjusted_variation = variation_decimal * direction
+        variation_sum += adjusted_variation
 
+        threshold = abs(result.asset.value_base)
         if result.variation_decimal is None:
             scores.append(0)
             continue
 
-        adjusted_variation = variation_decimal * direction
         if adjusted_variation >= threshold:
             scores.append(1)
         elif adjusted_variation <= -threshold:
