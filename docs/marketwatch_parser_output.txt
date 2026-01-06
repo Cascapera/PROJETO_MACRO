@@ -1,0 +1,14 @@
+Ativo: USD/KRW - Dólar Americano Won Sul-Coreano
+URL: https://www.marketwatch.com/investing/currency/usdkrw
+status=ok
+variacao_parser=0.11%
+
+Ativo: Petroleo Brasileiro Petrobras SA ADR
+URL: https://www.marketwatch.com/investing/stock/pbr
+status=ok
+variacao_parser=0.21%
+
+Ativo: Vale SA ADR
+URL: https://www.marketwatch.com/investing/stock/vale
+status=ok
+variacao_parser=1.54%

@@ -143,7 +143,8 @@ def render_market_sentiment_gauge(
     ax.set_xlim(-1.1, 1.1)
     ax.set_ylim(-0.1, 1.15)
 
-    fig.tight_layout()
+    if created_fig:
+        fig.tight_layout()
 
     if output_path is not None:
         output_path.parent.mkdir(parents=True, exist_ok=True)

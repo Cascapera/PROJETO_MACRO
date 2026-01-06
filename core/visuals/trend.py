@@ -30,7 +30,7 @@ def render_sentiment_trend(
     output_path: Optional[Path] = None,
     *,
     ax: Optional[plt.Axes] = None,
-    max_points: int = 40,
+    max_points: int = 20,
 ) -> plt.Figure:
     """Gera gráfico de linha mostrando a evolução da soma acumulada das variações."""
     cumulative = _load_cumulative_series(scores_path)
@@ -70,7 +70,8 @@ def render_sentiment_trend(
     ax.spines["left"].set_visible(False)
     ax.spines["bottom"].set_color("#444444")
 
-    fig.tight_layout()
+    if created_fig:
+        fig.tight_layout()
     if output_path is not None:
         output_path.parent.mkdir(parents=True, exist_ok=True)
         fig.savefig(output_path, dpi=150, facecolor=fig.get_facecolor())
